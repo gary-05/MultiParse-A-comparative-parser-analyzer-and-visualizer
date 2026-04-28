@@ -1,0 +1,24 @@
+SLR but not LL(1)
+
+1.  E -> E + T | T
+    T -> T * F | F
+    F -> ( E ) | id
+
+neither SLR nor LL1
+
+1.  S -> A a | b A c | d c | b d a
+    A -> d
+    --------------------
+2.  S -> L = R | R
+    L -> * R | id
+    R -> L
+
+Both SLR and LL1
+
+1.  S -> a A | b B
+    A -> c
+    B -> d
+    --------------------
+2.  S -> A B
+    A -> a | b
+    B -> c
